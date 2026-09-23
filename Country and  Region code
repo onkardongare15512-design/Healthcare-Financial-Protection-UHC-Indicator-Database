@@ -1355,7 +1355,7 @@ JOIN region_uhc u ON r.region_code = u.region_code
 GROUP BY r.region_code, r.region_name
 ORDER BY r.region_name;
 
--- Region-wise report for one year
+
 SELECT r.region_name, u.year,
        u.fbp1_percent, u.fbp2_percent,
        u.fbpr_percent, u.oopc10_percent, u.oopc25_percent
@@ -1375,7 +1375,7 @@ FROM country_uhc
 GROUP BY year
 ORDER BY year;
 
--- Compare one country's indicator across years
+
 SELECT c.country_name, u.year, u.fbp1_percent, u.fbp2_percent
 FROM country_info c
 JOIN country_uhc u ON c.iso3c = u.iso3c
